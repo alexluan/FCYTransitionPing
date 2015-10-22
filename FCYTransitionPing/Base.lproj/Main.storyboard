@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DYO-B8-nKb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="ZfA-gk-gsj">
+            <objects>
+                <viewController id="RCe-WJ-OnS" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rZZ-kr-zH6"/>
+                        <viewControllerLayoutGuide type="bottom" id="97U-LE-whR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Awy-Gc-Vhg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZp-Eq-zGx">
+                                <rect key="frame" x="50" y="70" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.34626810460000002" blue="0.1159990067" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Pop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="popButtonDidClick:" destination="RCe-WJ-OnS" eventType="touchUpInside" id="EFf-fT-GBE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.65098039220000004" green="1" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="TZp-Eq-zGx" firstAttribute="top" secondItem="rZZ-kr-zH6" secondAttribute="bottom" constant="50" id="DnH-k1-p17"/>
+                            <constraint firstItem="TZp-Eq-zGx" firstAttribute="leading" secondItem="Awy-Gc-Vhg" secondAttribute="leading" constant="50" id="mmw-fd-npH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="popButton" destination="TZp-Eq-zGx" id="EeI-bx-RAO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RYe-0z-pn8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2115" y="298"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESC-By-apH">
+                                <rect key="frame" x="519" y="70" width="31" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.34626810460000002" blue="0.1159990067" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Ping">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pingButtonDidClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MUe-6H-gO3"/>
+                                    <segue destination="RCe-WJ-OnS" kind="show" id="iUz-8Q-MGA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43137254899999999" green="0.65098039220000004" blue="0.93333333330000001" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="ESC-By-apH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="SGM-TD-8yK"/>
+                            <constraint firstAttribute="trailing" secondItem="ESC-By-apH" secondAttribute="trailing" constant="50" id="lfQ-mJ-xq4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gws-hM-1PX"/>
+                    <connections>
+                        <outlet property="pingButton" destination="ESC-By-apH" id="Kmp-Lp-Whd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1691" y="282"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qmd-Pw-3Va">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="DYO-B8-nKb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gkw-IK-bIe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QyS-qQ-sbo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8jj-Fg-UTV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="282"/>
+        </scene>
+    </scenes>
+</document>
